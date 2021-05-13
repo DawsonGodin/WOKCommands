@@ -186,7 +186,7 @@ class SlashCommands {
       .interactions(interaction.id, interaction.token)
       .callback.post({
         data: {
-          type: 4,
+          type: result === 'false' ? 1 : 4,
           data,
         },
       });
