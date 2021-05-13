@@ -185,7 +185,14 @@ class SlashCommands {
       // @ts-ignore
       .interactions(interaction.id, interaction.token)
       .callback.post({
+<<<<<<< HEAD
         data: result === 'false' ? { type: 1 } : { type: 4, data }
+=======
+        data: {
+          type: 4,
+          data,
+        },
+>>>>>>> parent of 02e1650 (diff interaction resp)
       });
 
     return true;
