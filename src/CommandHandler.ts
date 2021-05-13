@@ -477,7 +477,7 @@ class CommandHandler {
           options.push({
             name: item.replace(/ /g, "-"),
             description: item,
-            type: 3,
+            type: item.includes('channel') ? 7 : 3,
             required: a < minArgs,
           });
         }
