@@ -217,14 +217,10 @@ var SlashCommands = /** @class */ (function () {
                             // @ts-ignore
                             .interactions(interaction.id, interaction.token)
                             .callback.post({
-<<<<<<< HEAD
-                            data: result === 'false' ? { type: 1 } : { type: 4, data: data }
-=======
                             data: {
                                 type: 4,
                                 data: data,
                             },
->>>>>>> parent of 02e1650 (diff interaction resp)
                         });
                         return [2 /*return*/, true];
                 }
