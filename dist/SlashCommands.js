@@ -217,10 +217,7 @@ var SlashCommands = /** @class */ (function () {
                             // @ts-ignore
                             .interactions(interaction.id, interaction.token)
                             .callback.post({
-                            data: {
-                                type: result === 'false' ? 1 : 4,
-                                data: data,
-                            },
+                            data: result === 'false' ? { type: 1 } : { type: 4, data: data }
                         });
                         return [2 /*return*/, true];
                 }
